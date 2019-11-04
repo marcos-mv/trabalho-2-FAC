@@ -58,3 +58,24 @@ main:
 	li   		$v0, 5
 	syscall
 	add  		$s2, $zero, $v0
+
+exit:
+
+	# Mostra o resultado
+	li   		$v0, 4
+	la   		$a0, mostra_resultado
+	syscall
+	
+	# Chama U
+	li   		$v0, 35
+	add  		$a0, $zero, $t1
+	syscall
+
+	# Chama V
+	li   		$v0, 35
+	add  		$a0, $zero, $t2
+	syscall
+	
+	# Sai
+	li   		$v0, 10
+	syscall
